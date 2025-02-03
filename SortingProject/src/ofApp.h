@@ -5,6 +5,8 @@
 class ofApp : public ofBaseApp{
 
 	public:
+		vector<int> circles;
+
 		void setup();
 		void update();
 		void draw();
