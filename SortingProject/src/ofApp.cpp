@@ -92,13 +92,22 @@ void quickSort(vector<int>& circles, int start, int end) {
 	}
 }
 
-void fisherYatesSort(vector<int>& circles, int n){
+void fisherYatesSort(vector<int>& circles, int numberOfElements){
 	std::srand(time(NULL));
 
-	for (int i = n - 1; i > 0; i--)
-	{
-		int j = rand() % (i + 1);
-		std::swap(circles[i], circles[j]);
+	vector<int> visited = vector<int>(numberOfElements), output = vector<int>(numberOfElements);
+
+	for (int i = 0; i < numberOfElements; i++) {
+		int j = rand() % numberOfElements;
+		while (visited[j]) { 
+			j = rand() % numberOfElements;
+		}
+		output[i] = circles[j];
+		visited[j] = 1; 
+	}
+
+	for (int i = 0; i < numberOfElements; i++) {
+		circles[i] = output[i];
 	}
 }
 

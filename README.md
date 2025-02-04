@@ -8,3 +8,5 @@ Press 'B' to sort circles with Bubble sort algorithm.
 Press 'S' to sort circles with Fisher-Yates algorithm.
 Press 'I' to sort circles with Insertion sort algorithm.
 Press 'Q' to sort circles with quick sort algorithm.
+
+
